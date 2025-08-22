@@ -1,24 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-PT">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>repo-reverb</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <meta property="og:title" content="repo-reverb" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    
+    <!-- Favicon e ícones -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.svg" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pwa-512x512.svg" />
+    
+    <!-- Meta tags para responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#00A99D" />
+    <meta name="description" content="Sistema completo de gestão logística para controle de estoque, requisições e análise de demanda - Kibiona Logistics" />
+    <meta name="keywords" content="logística, gestão, estoque, requisições, demanda, Kibiona" />
+    <meta name="author" content="Kibiona Logistics" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Kibiona Logistics" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.svg" />
+    
+    <!-- Microsoft PWA Meta Tags -->
+    <meta name="msapplication-TileColor" content="#00A99D" />
+    <meta name="msapplication-TileImage" content="/pwa-192x192.svg" />
+    <meta name="msapplication-navbutton-color" content="#00A99D" />
+    
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:title" content="Sistema de Gestão Logística - Kibiona" />
+    <meta property="og:description" content="Sistema completo de gestão logística para controle de estoque, requisições e análise de demanda" />
+    <meta property="og:image" content="/pwa-512x512.svg" />
+    <meta property="og:url" content="/" />
+    <meta property="og:site_name" content="Kibiona Logistics" />
+    
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Sistema de Gestão Logística - Kibiona" />
+    <meta name="twitter:description" content="Sistema completo de gestão logística para controle de estoque, requisições e análise de demanda" />
+    <meta name="twitter:image" content="/pwa-512x512.svg" />
+    
+    <title>Sistema de Gestão Logística - Kibiona</title>
   </head>
-
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
