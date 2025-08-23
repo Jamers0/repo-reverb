@@ -1,0 +1,11 @@
+Material;Descrição;Cliente;Classe;Quantidade;Unidade;Data Necessidade;Hora;Observações
+CFBA0001;Banana 4/6;AA;Y;50;KG;2024-01-20;08:00;Entrega urgente
+CFBA0002;Maçã Golden;AF;X;25;KG;2024-01-20;13:30;Para voo AF447
+CFBA0003;Laranja Valencia;AC;Y;30;KG;2024-01-21;14:15;Cliente especial
+CQPO0001;Peito de Frango;DL;Z;100;KG;2024-01-20;16:00;Congelado
+CQPO0002;Salmão Fresco;TP;Y;75;KG;2024-01-21;18:00;Refrigerado
+PAS0001;Croissant;EK;X;200;UN;2024-01-22;08:00;Para breakfast
+PAS0002;Muffin Chocolate;LH;Y;150;UN;2024-01-22;13:30;Sobremesa
+TSU0001;Bandeja Premium;BA;Z;500;UN;2024-01-20;20:00;Primeira classe
+TSU0002;Talheres Descartáveis;S4;X;1000;UN;2024-01-21;08:00;Economy class
+WAP0001;Filme Plástico;KE;Y;10;RL;2024-01-23;14:15;Para embalagem

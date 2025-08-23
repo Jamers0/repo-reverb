@@ -10,6 +10,8 @@ import {
   Calendar,
   Truck,
   Package,
+  FileSpreadsheet,
+  ArrowLeftRight,
   X
 } from 'lucide-react';
 import Input from '../ui/Input';
@@ -51,6 +53,27 @@ const navItems = [
     category: "Logística"
   },
   { 
+    path: "/requisicoes-management", 
+    icon: <FileSpreadsheet size={18} />, 
+    label: "Gestão de Requisições", 
+    code: "REQ001",
+    category: "Gestão Logística"
+  },
+  { 
+    path: "/rupture-analysis", 
+    icon: <AlertTriangle size={18} />, 
+    label: "Análise de Rupturas", 
+    code: "ANA001",
+    category: "Gestão Logística"
+  },
+  { 
+    path: "/relatorios", 
+    icon: <FileSpreadsheet size={18} />, 
+    label: "Relatórios Profissionais", 
+    code: "REPORTS",
+    category: "Relatórios"
+  },
+  { 
     path: "/pr007", 
     icon: <FileText size={18} />, 
     label: "Gestão de Requisições", 
@@ -69,6 +92,13 @@ const navItems = [
     icon: <LayoutGrid size={18} />, 
     label: "Requisições sem Necessidades", 
     code: "RSN001",
+    category: "Gestão Logística"
+  },
+  { 
+    path: "/not001", 
+    icon: <ArrowLeftRight size={18} />, 
+    label: "Nova Ordem de Transferência", 
+    code: "NOT001",
     category: "Gestão Logística"
   },
 ];

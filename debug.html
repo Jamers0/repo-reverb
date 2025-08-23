@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Debug</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .debug-panel {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+        .warning { color: orange; }
+    </style>
+</head>
+<body>
+    <div class="debug-panel">
+        <h1>🔧 Debug do Sistema - O2P Portal</h1>
+        <p>Esta página está carregando? Se sim, o problema não é com o servidor.</p>
+        
+        <h2>Testes Básicos</h2>
+        <div id="tests"></div>
+        
+        <h2>Informações do Sistema</h2>
+        <div id="system-info"></div>
+        
+        <h2>Links de Teste</h2>
+        <ul>
+            <li><a href="/" target="_blank">Página Inicial</a></li>
+            <li><a href="/not001" target="_blank">Nova Ordem de Transferência</a></li>
+            <li><a href="/oprp1" target="_blank">Requisições</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const testsDiv = document.getElementById('tests');
+        const systemInfoDiv = document.getElementById('system-info');
+        
+        // Testes básicos
+        const tests = [
+            { name: 'JavaScript Ativo', test: () => true },
+            { name: 'Local Storage', test: () => typeof localStorage !== 'undefined' },
+            { name: 'Fetch API', test: () => typeof fetch !== 'undefined' },
+            { name: 'Console', test: () => typeof console !== 'undefined' }
+        ];
+        
+        tests.forEach(({ name, test }) => {
+            const result = test();
+            const p = document.createElement('p');
+            p.innerHTML = `${name}: <span class="${result ? 'success' : 'error'}">${result ? '✅ OK' : '❌ FALHOU'}</span>`;
+            testsDiv.appendChild(p);
+        });
+        
+        // Informações do sistema
+        systemInfoDiv.innerHTML = `
+            <p><strong>User Agent:</strong> ${navigator.userAgent}</p>
+            <p><strong>URL Atual:</strong> ${window.location.href}</p>
+            <p><strong>Protocolo:</strong> ${window.location.protocol}</p>
+            <p><strong>Host:</strong> ${window.location.host}</p>
+            <p><strong>Timestamp:</strong> ${new Date().toLocaleString()}</p>
+        `;
+        
+        // Teste de conectividade com o servidor Vite
+        fetch('/package.json')
+            .then(response => response.json())
+            .then(data => {
+                const p = document.createElement('p');
+                p.innerHTML = `<strong>Conectividade com Vite:</strong> <span class="success">✅ OK - Projeto: ${data.name}</span>`;
+                systemInfoDiv.appendChild(p);
+            })
+            .catch(error => {
+                const p = document.createElement('p');
+                p.innerHTML = `<strong>Conectividade com Vite:</strong> <span class="error">❌ ERRO - ${error.message}</span>`;
+                systemInfoDiv.appendChild(p);
+            });
+    </script>
+</body>
+</html>

@@ -1,23 +1,5 @@
-const CACHE_NAME = 'kibiona-logistics-v1.0.0';
-const urlsToCache = [
-  '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
-];
-
-// Install event - cache resources
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Cache opened');
-        return cache.addAll(urlsToCache);
-      })
-      .catch((error) => {
-        console.error('Cache install failed:', error);
-      })
-  );
+// Service Worker temporariamente desabilitado para debug
+console.log('Service Worker desabilitado temporariamente');
 });
 
 // Fetch event - serve from cache when offline

@@ -1,0 +1,249 @@
+/* Estilos específicos para o Sistema de Gestão de Transferências */
+
+/* Ribbon Toolbar */
+.ribbon-group {
+  @apply border-r border-gray-200 pr-6 last:border-r-0;
+}
+
+.ribbon-group:last-child {
+  @apply border-r-0;
+}
+
+/* Calendário customizado */
+.calendar {
+  @apply max-w-sm mx-auto;
+}
+
+.calendar button:hover {
+  @apply transition-colors duration-200;
+}
+
+/* Cores específicas do sistema */
+.color-primary {
+  color: #0078D4;
+}
+
+.bg-primary {
+  background-color: #0078D4;
+}
+
+.border-primary {
+  border-color: #0078D4;
+}
+
+.color-secondary {
+  color: #333333;
+}
+
+.bg-secondary {
+  background-color: #F3F3F3;
+}
+
+.border-secondary {
+  border-color: #D1D1D1;
+}
+
+/* Estados dos botões */
+.ribbon-button:hover {
+  background-color: #E1E1E1;
+}
+
+/* Tabelas com cores alternadas */
+.table-striped tr:nth-child(even) {
+  background-color: #FAFAFA;
+}
+
+.table-striped tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+/* Estados de status */
+.status-aberto {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-liberto {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-cancelado {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Formulários */
+.form-section {
+  @apply border-b border-gray-200 pb-6 mb-6;
+}
+
+.form-section:last-child {
+  @apply border-b-0 pb-0 mb-0;
+}
+
+/* Campos obrigatórios */
+.field-required label::after {
+  content: " *";
+  @apply text-red-500;
+}
+
+/* Modais */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4;
+}
+
+/* Tooltips */
+.tooltip {
+  @apply relative;
+}
+
+.tooltip::before {
+  content: attr(data-tooltip);
+  @apply absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 pointer-events-none transition-opacity duration-200;
+}
+
+.tooltip:hover::before {
+  @apply opacity-100;
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsividade para o ribbon */
+@media (max-width: 768px) {
+  .ribbon-group {
+    @apply border-r-0 border-b border-gray-200 pb-4 mb-4 pr-0;
+  }
+  
+  .ribbon-group:last-child {
+    @apply border-b-0 pb-0 mb-0;
+  }
+}
+
+/* Estilos para campos de busca */
+.search-field {
+  @apply relative;
+}
+
+.search-field .search-icon {
+  @apply absolute right-3 top-3 text-gray-400 pointer-events-none;
+}
+
+.search-field input {
+  @apply pr-10;
+}
+
+/* Estados de validação */
+.field-valid {
+  @apply border-green-300 focus:border-green-500 focus:ring-green-200;
+}
+
+.field-invalid {
+  @apply border-red-300 focus:border-red-500 focus:ring-red-200;
+}
+
+.field-warning {
+  @apply border-yellow-300 focus:border-yellow-500 focus:ring-yellow-200;
+}
+
+/* Cores Microsoft Fluent UI */
+.fluent-blue {
+  color: #0078D4;
+}
+
+.fluent-blue-bg {
+  background-color: #0078D4;
+}
+
+.fluent-blue-light {
+  color: #106EBE;
+}
+
+.fluent-blue-light-bg {
+  background-color: #106EBE;
+}
+
+.fluent-gray {
+  color: #323130;
+}
+
+.fluent-gray-bg {
+  background-color: #F3F2F1;
+}
+
+.fluent-gray-light {
+  color: #605E5C;
+}
+
+.fluent-gray-light-bg {
+  background-color: #FAF9F8;
+}
+
+/* Estilo para tabs */
+.tab-active {
+  @apply border-blue-500 text-blue-600 border-b-2;
+}
+
+.tab-inactive {
+  @apply border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-b-2;
+}
+
+/* Estilo para ícones no ribbon */
+.ribbon-icon {
+  @apply w-5 h-5 mb-1;
+}
+
+/* Loading states */
+.loading-spinner {
+  @apply animate-spin w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full;
+}
+
+/* Breadcrumbs customizados */
+.breadcrumb-item:not(:last-child)::after {
+  content: "›";
+  @apply mx-2 text-gray-400;
+}
+
+/* Cards com shadow suave */
+.card-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Transições suaves */
+.transition-smooth {
+  @apply transition-all duration-200 ease-in-out;
+}

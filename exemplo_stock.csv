@@ -1,0 +1,14 @@
+Material;Descrição;Stock CT;Stock FF;Secção;Departamento;Status
+CFBA0001;Banana 4/6;25;5;CF;R;Ruptura Parcial
+CFBA0002;Maçã Golden;0;0;CF;R;Ruptura Total
+CFBA0003;Laranja Valencia;100;50;CF;R;Normal
+CQPO0001;Peito de Frango;50;200;CQ;C1;Normal
+CQPO0002;Salmão Fresco;10;0;CQ;R;Ruptura Parcial
+PAS0001;Croissant;0;0;PAS;C2;Ruptura Total
+PAS0002;Muffin Chocolate;150;75;PAS;C2;Normal
+TSU0001;Bandeja Premium;200;100;TSU;S;Normal
+TSU0002;Talheres Descartáveis;500;1000;TSU;S;Normal
+WAP0001;Filme Plástico;5;15;WAP;DRG_AG;Normal
+CFBA0004;Uvas Verdes;0;10;CF;R;Ruptura Parcial
+CQPO0003;Bacalhau;0;0;CQ;C3;Ruptura Total
+PAS0003;Bolo Chocolate;25;0;PAS;C2;Ruptura Parcial
