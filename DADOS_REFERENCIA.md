@@ -10,7 +10,8 @@ O sistema de dados de referência centraliza todas as informações de **cliente
 
 As secções representam as diferentes áreas operacionais da empresa, organizadas por categorias:
 
-#### Categorias de Secções:
+#### Categorias de Secções
+
 - **Produção**: CF, CQ, PAS, REF_PAS, RPA, RPL, RCQ, RCF
 - **Refeitório**: RPA, RPL, RCQ, RCF
 - **Operacional**: RP, TSU, WAP, CRC, NHU, OBR, OPS, COP, CRG
@@ -24,7 +25,8 @@ As secções representam as diferentes áreas operacionais da empresa, organizad
 - **Desenvolvimento**: TEST, TESTE
 - **Genérico**: OUTROS
 
-#### Estrutura do Objeto Secção:
+#### Estrutura do Objeto Secção
+
 ```javascript
 {
   code: 'CF',
@@ -37,14 +39,16 @@ As secções representam as diferentes áreas operacionais da empresa, organizad
 
 Os departamentos representam as diferentes tipologias de produtos e códigos de classe de armazém:
 
-#### Categorias de Departamentos:
+#### Categorias de Departamentos
+
 - **Congelados**: C1, C2, C3, C4
 - **PRAÇA**: P, PRACA, F&V
 - **Refrigerados**: R, R4
 - **Secos**: S, Seco, Secos, AMB
 - **Consumíveis**: DRG_AG, DRG_LIMP, FARDAMENTO, DRG_COPA, ECONOMATO
 
-#### Estrutura do Objeto Departamento:
+#### Estrutura do Objeto Departamento
+
 ```javascript
 {
   code: 'C1',
@@ -58,11 +62,13 @@ Os departamentos representam as diferentes tipologias de produtos e códigos de 
 
 Os clientes incluem companhias aéreas, empresas de serviços e clientes internos:
 
-#### Tipos de Clientes:
+#### Tipos de Clientes
+
 - **Com Código**: Clientes que possuem código específico (ex: AC, AF, AA)
 - **Sem Código**: Clientes que não possuem código (marcados com "-" no sistema original)
 
-#### Estrutura do Objeto Cliente:
+#### Estrutura do Objeto Cliente
+
 ```javascript
 {
   number: 'C000001',
